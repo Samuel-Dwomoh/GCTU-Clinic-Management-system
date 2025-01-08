@@ -320,9 +320,24 @@ button:hover {
 .toast.show {
     transform: translateX(0);
 }
-.Landing-Page{
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb9srG7JTzBiL_eef7RE523LHC8HHN3AdkYg&s');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+section{
+    display: flex;
+    justify-content: start;
+    background-color: white;
+    margin: 0 3rem 0 3rem;
+    border-radius: 10px;
+    width: 45%;
+}
+section input{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+section label{
+    padding-top: 1rem;
+    font-weight: bold;
+}
+.section-1{
+    background-color: yellow;
+    margin: 1rem;
 }
