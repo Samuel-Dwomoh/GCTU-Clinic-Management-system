@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Clinic Management System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <image src="download-removebg-preview.png" alt="GCTU-LOGO"></image>
+                <span>GCTU Clinic Management System</span>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="#records"><i class="fas fa-folder-open"></i> Records</a></li>
+            <li><a href="#appointments"><i class="fas fa-calendar-alt"></i> Appointments</a></li>
+            <li><a href="#inventory"><i class="fas fa-pills"></i> Inventory</a></li>
+            <li><a href="#reports"><i class="fas fa-chart-bar"></i> Reports</a></li>
+            <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="card">
+                <h2><i class="fas fa-plus-circle"></i> Add New Record</h2>
+                <form id="clinic-form">
+                    <div class="form-group">
+                        <label for="studentId"><i class="fas fa-id-card"></i> Student ID</label>
+                        <input type="text" id="studentId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentName"><i class="fas fa-user"></i> Student Name</label>
+                        <input type="text" id="studentName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consultation"><i class="fas fa-stethoscope"></i> Consultation Notes</label>
+                        <textarea id="consultation" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="medicines"><i class="fas fa-pills"></i> Prescribed Medicines</label>
+                        <textarea id="medicines" rows="3" required></textarea>
+                    </div>
+                    <button type="submit"><i class="fas fa-save"></i> Save Record</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-folder-open"></i> Medical Records</h2>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search by Student ID or Name...">
+                </div>
+                <div class="records" id="records-container">
+                    <!-- Records will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
